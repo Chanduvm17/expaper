@@ -151,17 +151,23 @@
                 showNotificationModal(message);
             }
 
-            function validateLoginForm() {
-                const username = document.getElementById('loginUsername').value;
-                const password = document.getElementById('loginPassword').value;
+           function validateLoginForm() {
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
 
-                if (username.trim() === '' || password.trim() === '') {
-                    showError('Username and password are required. ');
-                    return false;
-                }
+    if (username.trim() === '' || password.trim() === '') {
+        showError('Username and password are required. ');
+        return false;
+    }
 
-                return true;
-            }
+    // Here you can perform additional validation if needed
+
+    // If everything is valid, redirect the user to another page
+    window.location.href = "your_redirect_url_here"; // Replace "your_redirect_url_here" with the URL you want to redirect to
+
+    return true;
+}
+
 
             function validateRegisterForm() {
                 const username = document.getElementById('registerUsername').value;
